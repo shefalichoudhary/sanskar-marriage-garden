@@ -34,7 +34,7 @@ export default function BookingsList({ bookings }: any) {
 
   return (
     <div className="  flex flex-col sm:pb-28 md:pb-28">
-      <div className="max-w-6xl px-2 sm:px-4 lg:px-8  pt-6 flex-grow">
+      <div className="max-w-6xl px-2 sm:px-4 lg:px-8   flex-grow">
         {/* Page Title */}
         <h1 className="text-xl text-center sm:text-2xl font-bold text-red-800 mb-4">
           Bookings
