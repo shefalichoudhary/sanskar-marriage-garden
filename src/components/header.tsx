@@ -13,9 +13,9 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-[#161518] text-white p-4 shadow-md fixed w-full z-50">
+    <header className="bg-[#161518] text-white p-4 shadow-md fixed w-full z-50 mb-1">
       <div className="max-w-6xl mx-auto flex items-center justify-between">
-        <h1 className="text-2xl font-bold">Sunrise Marriage Garden</h1>
+        <h1 className="text-xl font-medium ">Sanskar Marriage Garden</h1>
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex gap-4">
@@ -36,7 +36,7 @@ export default function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden w-10 h-10 flex items-left justify-left p-2 bg-red-800 rounded-lg shadow-md hover:bg-red-700 transition-colors"
+          className="md:hidden w-10 h-10 flex items-left justify-left p-2   transition-colors"
           onClick={() => setIsOpen((prev) => !prev)}
         >
           {isOpen ? <XMarkIcon className="w-6 h-6" /> : <Bars3Icon className="w-6 h-6" />}

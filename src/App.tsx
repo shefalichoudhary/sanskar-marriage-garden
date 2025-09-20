@@ -22,9 +22,9 @@ export default function App() {
 
   return (
     <Router>
-      <div className="min-h-screen flex flex-col bg-gray-100">
+      <div className="min-h-screen flex flex-col bg-gray-100 ">
         <Header />
-        <main className="flex-1 max-w-6xl mx-auto p-6 pt-20 w-full">
+        <main className="flex-1 max-w-6xl mx-auto px-1 pt-20 w-full">
           <Routes>
             <Route path="/" element={<Home bookings={bookings} setBookings={setBookings} />} />
             <Route path="/bookings" element={<Bookings bookings={bookings} />} />
