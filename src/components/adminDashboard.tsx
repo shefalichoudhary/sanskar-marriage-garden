@@ -32,7 +32,7 @@ export default function AdminDashboard({ bookings }: any) {
       {/* Bookings List */}
       <div className="bg-white rounded-xl shadow-md p-4 sm:p-6">
         {/* Scrollable container for many bookings */}
-        <div className="max-h-[200px] overflow-y-auto">
+        <div className="max-h-[400px] overflow-y-auto">
           <BookingsList bookings={bookings} />
         </div>
       </div>
