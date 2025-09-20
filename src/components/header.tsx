@@ -13,9 +13,9 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-[#161518] text-white p-4 shadow-md static w-full z-50 pb-4">
+    <header className="bg-[#161518] text-white p-4 shadow-md fixed top-0 left-0 w-full z-50">
       <div className="max-w-6xl mx-auto flex items-center justify-between">
-        <h1 className="text-xl font-medium ">Sanskar Marriage Garden</h1>
+        <h1 className="text-xl font-medium">Sanskar Marriage Garden</h1>
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex gap-4">
@@ -36,17 +36,21 @@ export default function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden w-10 h-10 flex items-left justify-left p-2   transition-colors"
+          className="md:hidden w-10 h-10 flex items-center justify-center p-2 transition-colors"
           onClick={() => setIsOpen((prev) => !prev)}
         >
-          {isOpen ? <XMarkIcon className="w-6 h-6" /> : <Bars3Icon className="w-6 h-6" />}
+          {isOpen ? (
+            <XMarkIcon className="w-6 h-6" />
+          ) : (
+            <Bars3Icon className="w-6 h-6" />
+          )}
         </button>
       </div>
 
       {/* Mobile Menu */}
-       <div
-        className={`md:hidden fixed top-full left-0 w-full h-screen bg-black bg-opacity-95 backdrop-blur-sm shadow-lg transition-transform duration-300 ease-out transform ${
-          isOpen ? "-translate-y-full" : "translate-y-0"
+      <div
+        className={`md:hidden fixed top-0 left-0 w-full h-screen bg-black bg-opacity-95 backdrop-blur-sm shadow-lg transition-transform duration-300 ease-out transform ${
+          isOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
         <nav className="flex flex-col items-center justify-center h-full gap-6">
@@ -55,7 +59,9 @@ export default function Header() {
               key={link.path}
               to={link.path}
               className={`w-10/12 text-center px-6 py-3 rounded-lg text-lg font-medium transition-colors duration-200 ${
-                pathname === link.path ? "bg-red-700 shadow-lg" : "hover:bg-red-800"
+                pathname === link.path
+                  ? "bg-red-700 shadow-lg"
+                  : "hover:bg-red-800"
               }`}
               onClick={() => setIsOpen(false)}
             >
