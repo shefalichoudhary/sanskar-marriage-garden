@@ -12,7 +12,7 @@ export default function BookingsList({ bookings }: any) {
   return (
     <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8 pb-6 pt-2">
       {/* Page Title */}
-      <h1 className="text-xl sm:text-2xl font-bold text-red-800 mb-4">
+      <h1 className="text-xl text-ce sm:text-2xl font-bold text-red-800 mb-4">
         Bookings
       </h1>
 
