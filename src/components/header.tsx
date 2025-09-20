@@ -13,7 +13,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-[#161518] text-white p-4 shadow-md fixed w-full z-50 mb-1">
+    <header className="bg-[#161518] text-white p-4 shadow-md static w-full z-50 pb-4">
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         <h1 className="text-xl font-medium ">Sanskar Marriage Garden</h1>
 

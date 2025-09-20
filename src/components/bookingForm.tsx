@@ -51,10 +51,10 @@ const whatsappLink = `https://wa.me/${OWNER_WHATSAPP_NUMBER}?text=${encodeURICom
   `Hello, I have paid ₹${PRICE} for booking at ${GARDEN_OWNER_NAME}.\nName: ${form.name}\nPhone: ${form.phone}\nDate: ${form.date}\nGuests: ${form.guests}\nEvent Type: ${form.eventType}`
 )}`;
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50 p-4">
+    <div className="fixed inset-0 flex items-center justify-center bg-black/20 z-50 p-1 pt-6 top-18 ">
       {/* Booking Form */}
       {!showQR && !showReceiptPopup && (
-        <form className="bg-white/90 backdrop-blur-md rounded-2xl p-6 w-full max-w-md shadow-xl border border-gray-200" onSubmit={handleConfirm}>
+        <form className=" pt-2 bg-white/20 backdrop-blur-md rounded-2xl p-6 w-full max-w-md shadow-xl border border-gray-200 top-20" onSubmit={handleConfirm}>
           <h2 className="text-2xl font-bold text-black mb-5 text-center">Book Your Event</h2>
 
           <input className="border rounded-lg p-3 w-full mb-3" placeholder="Full Name" name="name" value={form.name} onChange={handleChange} />
@@ -62,7 +62,7 @@ const whatsappLink = `https://wa.me/${OWNER_WHATSAPP_NUMBER}?text=${encodeURICom
           <input className="border rounded-lg p-3 w-full mb-3" placeholder="Phone" name="phone" value={form.phone} onChange={handleChange} />
           <input className="border rounded-lg p-3 w-full mb-3" type="date" name="date" value={form.date} onChange={handleChange} />
           <input className="border rounded-lg p-3 w-full mb-3" placeholder="Guests" type="number" name="guests" value={form.guests} onChange={handleChange} />
-          <input className="border rounded-lg p-3 w-full mb-3" placeholder="Event Type" name="eventType" value={form.eventType} onChange={handleChange} />
+<select name="eventType" value={form.eventType} onChange={handleChange} className="border rounded-lg p-3 w-full mb-3" > <option value="">Select Event Type</option> <option value="Wedding">Wedding</option> <option value="Engagement">Engagement</option> <option value="Birthday">Birthday</option> <option value="Anniversary">Anniversary</option> <option value="Reception">Reception</option> <option value="Corporate Event">Corporate Event</option> <option value="Other">Other</option> </select>
           <textarea className="border rounded-lg p-3 w-full mb-3" placeholder="Note (optional)" name="note" value={form.note} onChange={handleChange}></textarea>
 
           <div className="flex justify-between mt-5">

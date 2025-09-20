@@ -22,9 +22,8 @@ export default function App() {
 
   return (
     <Router>
-      <div className="min-h-screen flex flex-col bg-gray-100 ">
         <Header />
-        <main className="flex-1 max-w-6xl mx-auto px-1 pt-20 w-full">
+        <main className="flex-1 max-w-6xl mx-auto px-1 pt-1 w-full py-6">
           <Routes>
             <Route path="/" element={<Home bookings={bookings} setBookings={setBookings} />} />
             <Route path="/bookings" element={<Bookings bookings={bookings} />} />
@@ -32,7 +31,6 @@ export default function App() {
           </Routes>
         </main>
         <Footer />
-      </div>
     </Router>
   );
 }
