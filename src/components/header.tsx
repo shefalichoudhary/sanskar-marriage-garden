@@ -50,15 +50,15 @@ export default function Header() {
       {/* Mobile Menu */}
       <div
         className={`md:hidden fixed top-0 left-0 w-full h-screen bg-black bg-opacity-95 backdrop-blur-sm shadow-lg transition-transform duration-300 ease-out transform ${
-          isOpen ? "translate-y-0" : "-translate-y-full"
+          isOpen ? "translate-y-16" : "-translate-y-full"
         }`}
       >
-        <nav className="flex flex-col items-center justify-center h-full gap-6">
+        <nav className="flex flex-col items-center justify-center  h-4/6 gap-1">
           {links.map((link) => (
             <Link
               key={link.path}
               to={link.path}
-              className={`w-10/12 text-center px-6 py-3 rounded-lg text-lg font-medium transition-colors duration-200 ${
+              className={`w-10/12 text-center px-6 py-2 rounded-lg text-lg font-medium transition-colors duration-200 ${
                 pathname === link.path
                   ? "bg-red-700 shadow-lg"
                   : "hover:bg-red-800"
