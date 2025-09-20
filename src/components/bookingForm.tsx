@@ -62,7 +62,7 @@ const whatsappLink = `https://wa.me/${OWNER_WHATSAPP_NUMBER}?text=${encodeURICom
           <input className="border rounded-lg p-3 w-full mb-3" placeholder="Phone" name="phone" value={form.phone} onChange={handleChange} />
           <input className="border rounded-lg p-3 w-full mb-3" placeholder="dd/mm/yyyy" type="date" name="date" value={form.date} onChange={handleChange} />
           <input className="border rounded-lg p-3 w-full mb-3" placeholder="Guests" type="number" name="guests" value={form.guests} onChange={handleChange} />
-<select name="eventType" value={form.eventType} onChange={handleChange} className="border rounded-lg p-3 w-full mb-3" > <option value="">Select Event Type</option> <option value="Wedding">Wedding</option> <option value="Engagement">Engagement</option> <option value="Birthday">Birthday</option> <option value="Anniversary">Anniversary</option> <option value="Reception">Reception</option> <option value="Corporate Event">Corporate Event</option> <option value="Other">Other</option> </select>
+          <select name="eventType" value={form.eventType} onChange={handleChange} className="border rounded-lg p-3 w-full mb-3" > <option value="">Select Event Type</option> <option value="Wedding">Wedding</option> <option value="Engagement">Engagement</option> <option value="Birthday">Birthday</option> <option value="Anniversary">Anniversary</option> <option value="Reception">Reception</option> <option value="Corporate Event">Corporate Event</option> <option value="Other">Other</option> </select>
           <textarea className="border rounded-lg p-3 w-full mb-3" placeholder="Note (optional)" name="note" value={form.note} onChange={handleChange}></textarea>
 
           <div className="flex justify-between mt-5">
