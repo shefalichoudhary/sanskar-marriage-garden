@@ -1,13 +1,30 @@
 import React from "react";
 import { PhoneIcon, UsersIcon, CurrencyDollarIcon } from "@heroicons/react/24/outline";
-
+import { Link } from "react-router-dom";
+import { CalendarIcon } from "@heroicons/react/24/outline";
 export default function BookingsList({ bookings }: any) {
-  if (!bookings.length)
-    return (
-      <p className="text-gray-500 text-center mt-8 text-base sm:text-lg">
-        No bookings yet.
+ if (!bookings.length)
+  return (
+    <div className="flex flex-col items-center justify-center mt-12 gap-6">
+      <CalendarIcon className="w-16 h-16 text-gray-300" />
+
+      <p className="text-gray-500 text-center text-base sm:text-lg max-w-sm">
+        No bookings yet. Once someone books your venue, the details will appear here.
       </p>
-    );
+
+      <Link
+        to="/book-event"
+        className="px-6 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg shadow transition"
+      >
+        Create Booking
+      </Link>
+
+      <p className="text-gray-400 text-sm max-w-xs text-center">
+        Pro tip: Share your venue link with clients to get bookings faster!
+      </p>
+    </div>
+  );
+
 
   return (
     <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-8 pb-6 pt-2">
